@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>发票信息</title>
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<link rel="stylesheet" href="css/indexone.css" />
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+	</head>
+	<body>
+	<!-- 头部star -->
+	<div class="mobile_head">
+		<div class="ld_head_content">
+			<div class="ld_head_left">
+				<a><img src="images/Back.png"></a>
+			</div>
+			<div class="ld_head_center">
+                发票信息
+            </div>	
+            <div class="ld_head_right">
+                
+            </div>
+		</div>	
+	</div>
+    <!-- 头部end -->
+    <!-- 选择发票类别star-->
+    <div class="ld_ivocategory">
+        <div>
+            <p><input name="invoice" type="radio"/><span>增值税普通发票</span></p>  
+            <p><input name="invoice" type="radio" /><span>增值税专用发票</span></p>
+        </div>
+    </div>
+    <!-- 选择发票类别end-->
+    <div class="ld_tab">
+    	<!--选项企业、个人star -->
+    	<ul class="ld-tab-hd">
+    		<li class="active xuan">企业</li>
+    		<li class="xuan">个人</li>
+    	</ul>
+    	<div class="ld_inline">
+    	</div>
+    	<!--选项企业、个人end -->
+    	<ul class="ld-tab-bd">
+    		<li class="thisclass" style="display:block;">
+		    	<!-- 企业开发票内容star-->
+				<div class="ld_address_information ld_invoice_infor">
+			        <div class="ld_profile_item">
+			            <div class="ld_profile_item_left ld_fapiao">发票抬头</div>
+			            <div class="ld_profile_item_right ld_fapiao_right">
+			                <input type="text" placeholder="请填写准确的抬头">
+			            </div>
+			        </div>
+			        <div class="ld_profile_item">
+			            <div class="ld_profile_item_left ld_fapiao">纳税人识别号</div>
+			            <div class="ld_profile_item_right ld_fapiao_right">
+			                <input type="text" placeholder="输入纳税人识别号">
+			            </div>
+			        </div>
+			        <div class="ld_profile_item">
+			            <div class="ld_profile_item_left ld_fapiao">注册地址</div>
+			            <div class="ld_profile_item_right ld_fapiao_right">
+			                <input type="text" placeholder="请输入单位注册地址">
+			            </div>
+			        </div>
+			        <div class="ld_profile_item">
+			            <div class="ld_profile_item_left ld_fapiao">注册电话</div>
+			            <div class="ld_profile_item_right ld_fapiao_right">
+			                <input type="text" placeholder="单位注册时的电话">
+			            </div>
+			        </div>
+			        <div class="ld_profile_item">
+			            <div class="ld_profile_item_left ld_fapiao">开户银行</div>
+			            <div class="ld_profile_item_right ld_fapiao_right">
+			                <input type="text" placeholder="开户银行名称">
+			            </div>
+			        </div>
+			        <div class="ld_profile_item">
+			            <div class="ld_profile_item_left ld_fapiao">银行账户</div>
+			            <div class="ld_profile_item_right ld_fapiao_right">
+			                <input type="text" placeholder="开户银行账户">
+			            </div>
+			        </div>
+			    </div>                                                                                                       
+	    		<!-- 企业开发票内容end-->	
+	    	</li>
+	    	<li style="display: none;">
+	    		<!-- 个人开发票内容star-->
+				<div class="ld_address_information ld_invoice_infor">
+			        <div class="ld_profile_item">
+			            <div class="ld_profile_item_left ld_fapiao">发票抬头</div>
+			            <div class="ld_profile_item_right ld_fapiao_right">
+			                <input type="text" placeholder="请填写准确的抬头">
+			            </div>
+			        </div>
+			    </div>                                                                                                       
+	    		<!-- 个人开发票内容end-->	
+	    	</li>
+	    </ul>
+	</div>
+    <div class="ld_inline">
+    </div>
+    <!-- 设为默认star-->
+    <div class="ld_setdefault">
+        <div>
+            <input type="checkbox" id="1" class="checkbox">
+            <label class="switch" for="1"></label>
+        </div>
+        <div class="ld_defullt">设为默认</div>
+    </div>
+    <!-- 设为默认end-->
+    <!-- 增票开具star-->
+    <div class="ld_intip">
+    	<p><input name="invoice" type="radio"/>本人已阅读并同意<a>《增具开票确认书》</a></p> 	
+    	<p>为提高开票效率，请准确填写所有发票信息</p>
+    </div>
+    <!-- 增票开具end-->
+	<!-- 底部star-->
+	<div class="ld_add_address">
+        <a>保存</a>
+    </div>
+	<!-- 底部end-->
+	</body>
+	<script type="text/javascript">
+	$(function(){
+	    function tabs(tabTit,on,tabCon){
+	        $(tabTit).children().click(function(){
+	            $(this).addClass(on).siblings().removeClass(on);
+	            var index = $(tabTit).children().index(this);
+	           	$(tabCon).children().eq(index).show().siblings().hide();
+	    	});
+		};
+	    tabs(".ld-tab-hd","active",".ld-tab-bd");
+	});
+	</script>
+</html>

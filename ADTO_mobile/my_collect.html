@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<link rel="stylesheet" href="css/indexone.css" />
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+    </head>
+    <style>
+        body{ background-color: #f5f5f5;}
+    </style>
+	<body>
+	<!-- 头部star -->
+	<div class="mobile_head">
+            <div class="ld_head_content">
+                <div class="ld_head_left">
+                    <a><img src="images/Back.png"></a>
+                </div>
+                <div class="ld_head_center ld_head_center_two">
+                    全部收藏
+                </div>
+                <div class="ld_head_right ld_head_right_two">
+                    <a>编辑</a>
+                    <a id="all">全选</a>
+                    <a class="cd-popup-trigger"><img src="images/co_delete.png">删除</a>
+                    <a>完成</a>
+                </div>	
+            </div>	
+        </div>
+	<!-- 头部end -->
+    <!-- 内容star-->
+    <ul class="pt-list">
+        <li class="pt-h-item c-fix">
+            <a class="">
+                <input type="checkbox">
+                <div class="pt-h-img" href="#"><img src="images/collect_product.png"></div>
+                <div class="pt-h-info">
+                    <div class="pt-h-name">优质38米搅拌泵搅拌泵搅拌泵搅拌
+                    泵搅拌泵搅拌泵搅拌泵搅拌泵</div>
+                    <div class="pt-h-price price">
+                        ￥1688.00 
+                    </div>
+                  <!--    -->
+                </div>
+            </a>
+        </li>
+        <li class="pt-h-item c-fix">
+            <a class="pt-h-link" href="">
+                <input type="checkbox"> 
+                <div class="pt-h-img" href="#"><img src="images/collect_product.png"></div>
+                <div class="pt-h-info">
+                    <div class="pt-h-name">优质38米搅拌泵搅拌泵搅拌泵搅拌
+                    泵搅拌泵搅拌泵搅拌泵搅拌泵</div>
+                    <div class="pt-h-price price">
+                        ￥1688.00  
+                    </div>
+                  <!--    -->
+                </div>
+            </a>
+        </li>
+        <li class="pt-h-item c-fix">
+            <a class="pt-h-link" href="">
+               
+                <div class="pt-h-img" href="#"><input type="checkbox"><img src="images/collect_product.png"></div>
+                <div class="pt-h-info">
+                    <div class="pt-h-name">优质38米搅拌泵搅拌泵搅拌泵搅拌
+                    泵搅拌泵搅拌泵搅拌泵搅拌泵</div>
+                    <div class="pt-h-price price">
+                        ￥1688.00  
+                    </div>
+                  <!--    -->
+                </div>
+            </a>
+        </li>
+        <li class="pt-h-item c-fix">
+                <a class="pt-h-link" href="">
+                   
+                    <div class="pt-h-img" href="#"><input type="checkbox"><img src="images/collect_product.png"></div>
+                    <div class="pt-h-info">
+                        <div class="pt-h-name">优质38米搅拌泵搅拌泵搅拌泵搅拌
+                        泵搅拌泵搅拌泵搅拌泵搅拌泵</div>
+                        <div class="pt-h-price price">
+                            ￥1688.00  
+                        </div>
+                      <!--    -->
+                    </div>
+                </a>
+        </li>
+        <li class="pt-h-item c-fix">
+                <a class="pt-h-link" href="">
+                   
+                    <div class="pt-h-img" href="#"><input type="checkbox"><img src="images/collect_product.png"></div>
+                    <div class="pt-h-info">
+                        <div class="pt-h-name">优质38米搅拌泵搅拌泵搅拌泵搅拌
+                        泵搅拌泵搅拌泵搅拌泵搅拌泵</div>
+                        <div class="pt-h-price price">
+                            ￥1688.00  
+                        </div>
+                      <!--    -->
+                    </div>
+                </a>
+        </li>
+    </ul>
+    <p class="ld_nomore">没有更多收藏了</p>  
+	<!-- 内容end-->
+	<!-- 弹出层开始-->
+	<div class="cd-popup" role="alert">
+		<div class="cd-popup-container">
+			<p>你确定你要删除这项收藏吗?</p>
+			<ul class="cd-buttons">
+				<li><a href="">是</a></li>
+				<li><a href="">否</a></li>
+			</ul>
+			<a href="" class="cd-popup-close img-replace"></a>
+		</div> <!-- cd-popup-container -->
+	</div> <!-- cd-popup -->
+	<!-- 弹出层结束-->
+	<!-- 底部star-->
+	<div class="ld_copyright">
+        <p>Copyright © 2019 <a>元拓物联有限公司</a>版权所有</p>
+        <p>湖南省长沙市雨花区人民东路铭城国际11楼</p>
+    </div>
+    <!-- 底部end-->
+    <script>
+            window.onload=function(){
+                    var all=document.getElementById("all");
+                    var one=document.getElementsByTagName("input");
+
+                   
+                   all.onclick=function(){
+                         for(var i=1;i<one.length;i++){
+                            one[i].checked=all.checked;
+                       }
+                   }
+                   for(var i=1;i<one.length;i++){
+                        one[i].onclick=function(){
+                            var num=0;
+                            for(var j=1;j<one.length;j++)
+                            {
+                                if(one[j].checked==true)
+                                {
+                                    num++;
+                                }
+                            }
+                        if(num==one.length-1)
+                        {
+                            all.checked=true;
+                        }
+                        else{
+                            all.checked=false;
+                        }
+                        }
+                   }
+            }
+        </script>
+        <script type="text/javascript" src="js/main.js" ></script>
+        <script type="text/javascript" src="js/jquery.qrcode.min.js" ></script>
+	</body>
+</html>

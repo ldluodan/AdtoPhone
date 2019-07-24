@@ -1,0 +1,120 @@
+body, div, dl, dt, dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;font-size:12px;font-family: "Simsun Font";color:#000;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0;}
+address,caption, cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+capation,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before, q:after{content:' '}
+abbr,acronym{border:0;} 
+a{text-decoration:none;}
+a:hover{cursor:pointer;text-decoration:none;}
+i{font-style:noheightrmal;}
+input{padding:0;outline: none;}
+textarea{outline:none;}
+.pull-left{float: left;}
+.pull-right{float: right;}
+.clear{clear: both;}
+
+.yy_header{
+    display: flex;
+    width: 100%;
+    height: 2.875rem;
+    /* padding: .3125rem; */
+    background: #e62129;
+    line-height: 2.875rem;
+}
+.yy_header1{
+    flex-grow: 0.5;
+}
+.yy_header1 img{
+    width: 7.25rem;
+    height: 2.0625rem;
+    margin: .3125rem 0 0 .4375rem;
+}
+
+.yy_header2{
+    flex-grow: 2;
+    background: #ffffff;
+    width: 12.8125rem;
+    height: 2.0625rem;
+    border-radius: .3125rem;
+    padding: .125rem 0 0 .3125rem;
+    margin: .3125rem 0 0 .3125rem;
+}
+.yy_header2>div img{
+    float: left;
+    width: 1.125rem;
+    padding: .5rem 0 0 0;
+    
+}
+.yy_header2>div input{
+    float: left;
+    height: 2.0625rem;
+    width: 11.5625rem;
+    padding-left: .3125rem;
+    border: none;
+}
+.yy_header3{
+    flex-grow: 0.5;
+}
+.yy_header3 a{
+    display: block;
+    padding: 0 0 0 .3125rem;
+    width: 1.25rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    color: #ffffff;
+    font-size: 1.25rem;
+    text-align: center;
+}
+.yy_banner{
+    width: 100%;
+}
+.yy_banner img{
+    width: 100%;
+}
+.yy_content ul{
+    width: 100%;
+}
+.yy_content ul li{
+    width: 7.8125rem;
+    display: inline-block;
+    float: left;
+    margin: .875rem 0 .125rem 0;
+}
+.yy_content ul li img{
+    display: block;
+    margin: 0 auto;
+    width: 4.375rem;
+    height: 4.375rem;
+}
+.yy_content ul li p{
+    text-align: center;
+    font-size: 1rem;
+    padding: .3125rem 0 0 0;
+}
+.yy_bottom{
+    width: 100%;
+    height: 2.9375rem;
+    border-top: .0625rem solid #dddddd;
+    position: fixed;
+    bottom: 0;
+}
+.yy_bottom ul li{
+    display: inline-block;
+    width: 24%;
+    float: left;
+    padding: .3125rem 0 0 0;
+}
+.yy_bottom ul li img{
+    width: 1.25rem;
+    height: 1.25rem;
+    display: block;
+    margin: 0 auto;
+}
+.yy_bottom ul li p{
+    text-align: center;
+    font-size: .75rem;
+    color: #333333;
+}
